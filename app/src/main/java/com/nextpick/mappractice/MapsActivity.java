@@ -32,7 +32,7 @@ import com.nextpick.mappractice.databinding.ActivityMapsBinding;
 import java.security.Permission;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
-
+//    AIzaSyAbNNeGmSw7YMQvIxWW3S5EP9kr3hLrTfg
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
     LocationManager locationManager;
