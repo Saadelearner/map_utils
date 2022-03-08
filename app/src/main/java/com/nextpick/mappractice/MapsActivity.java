@@ -12,6 +12,13 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -126,4 +133,44 @@ private void getCurrentLocation(){
             getCurrentLocation();
         }
     }
+
+//    public void requestAuthorize( String stringToSend,final ServiceRespone serviceRespone) {
+//        String response = "";
+//        RequestQueue queue = Volley.newRequestQueue(context);
+////        https://cabtreasureappapi.co.uk/CabTreasureWebApi/Home/VerifyClientAppAccountWeb?accountCode=dev2123&deviceInfo=Android&deviceId=what&hashKey=dev2123Androidwhat4321orue
+//        String url = "https://cabtreasureappapi.co.uk/CabTreasureWebApi/Home/VerifyClientAppAccountWeb?"+stringToSend;
+//        url=url.replace(" ","%20");
+//        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+//                new Response.Listener<String>() {
+//                    @Override
+//                    public void onResponse(String response) {
+//                        try {
+//                            String prefix ="\\\\";
+//                            if(response.startsWith("\"")){
+//                                response =response.substring(1,response.length()-1);
+//                                response = response.replaceAll(prefix, "");
+//                            }
+//                            serviceRespone.getServiceResponse(response);
+//
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                            serviceRespone.getServiceResponse("pdaclienterror:Error in parsing details,Please try again later");
+//                        }
+//                    }
+//                }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//
+//                serviceRespone.getServiceResponse("pdaclienterror:"+error.getLocalizedMessage());
+//            }
+//        });
+//        stringRequest.setTag(FojAcceptTag);
+//// Add the request to the RequestQueue.
+//        stringRequest.setRetryPolicy(new DefaultRetryPolicy(
+//                8000,
+//                0,
+//                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+//        queue.add(stringRequest);
+//
+//    }
 }
