@@ -54,7 +54,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+//        AIzaSyAbNNeGmSw7YMQvIxWW3S5EP9kr3hLrTfg
 
+//        String DirectionClien = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lon + "&sensor=false&key=" + sp.getString("googlemapkey", "");
         setContentView(R.layout.activity_maps);
         locationManager =  (LocationManager) getSystemService(LOCATION_SERVICE);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
